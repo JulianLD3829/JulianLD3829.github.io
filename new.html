@@ -5,6 +5,10 @@
 body {
   overflow: hidden; /* Hide scrollbars */
   font-family: 'Poppins';
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
 <audio id="Warn">
@@ -21,6 +25,110 @@ function pauseAudio() {
   x.pause(); 
 } 
 </script>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#calculator {
+  position: absolute;
+  border-radius: 10px;
+  background-color: #f1f1f1;    
+  text-align: center;
+  padding: 8px;
+  z-index: 9;
+}
+</style>
+</head>
+<body>
+<div id="calculator">
+<html>
+   <head>
+      <script>
+         //function that display value
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+           
+         //function that evaluates the digit and return result
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+           
+         //function that clear the display
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+      </script>
+      <!-- for styling -->
+      <style>
+  
+         input[type="button"]
+         {
+         background-color:black;
+         color: white;
+         width:100%;
+         border-radius: 6px;
+         border: none;
+         padding: 10px;
+         }
+  
+         input[type="text"]
+         {
+         background-color:black;
+         border: 2px solid black;
+         padding: 8px;
+         border-radius: 6px;
+         color: #fff;
+         }
+      </style>
+   </head>
+   <!-- create table -->
+   <body>
+      <table border="0">
+         <tr>
+            <td colspan="3"><input type="text" id="result" value="" /></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="Clear" onclick="clr()"/></td>
+         </tr>
+         <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input type="button" value=":|:" onclick="dis('/')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input type="button" value="-" onclick="dis('-')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input type="button" value="+" onclick="dis('+')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="." onclick="dis('.')"/> </td>
+            <td><input type="button" value="0" onclick="dis('0')"/> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td>
+            <td><input type="button" value="x" onclick="dis('*')"/> </td>
+         </tr>
+      </table>
+   </body>
+</html>   
+</div>
+</body>
+</html>
+
 <!--Start of setup-->
 <style>
   .oobe {
@@ -59,7 +167,7 @@ function pauseAudio() {
 #oobe {
   position: absolute; background-color: #000000;
   min-height: 100%; min-width: 100%;
-  z-index: 9; padding: 8px;
+  z-index: 10; padding: 8px;
   top:0%; right:0%; 
   bottom:0%; left:0%;
   color: #fff;
@@ -133,12 +241,20 @@ function pauseAudio() {
     x.style.display = "none";
   }
 }
+function calculator() {
+  var x = document.getElementById("calculator");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 </script>
 <div id="oobe">
   <h1>Welcome to DeskUtility!</h1>
-  <button class="oobe oobe1" onclick="oobe1();about();app();preferences();metroswitch();">Next</button>
+  <button class="oobe oobe1" onclick="exit();woahthere();oobe1();about();app();preferences();metroswitch();calculator();">Next</button>
   <button class="oobe oobe1 oobe3" onclick="oobeskip();playAudio();">Cancel OOBE (Read Following Text)</button>
-  <button class="oobe oobe1 oobe3" onclick="exit();">Close DeskUtility</button>
+  <button class="oobe oobe1 oobe3" onclick="exit();playAudio();">Close DeskUtility</button>
  </div>
  <div id="browser">
   <h1>Select your browser!</h1>
@@ -204,25 +320,42 @@ function wr6() {
 function wr7() {
   document.body.style.backgroundImage = "url('wr7.jpg')"; 
 }
-function myFunctiondark() {
-  document.getElementById("mysettingsheader").style.backgroundColor = "#1a1a1a";
-  document.getElementById("mydtextheader").style.backgroundColor = "#1a1a1a";
-  document.getElementById("myappsheader").style.backgroundColor = "#1a1a1a";
-  document.getElementById("mysnapheader").style.backgroundColor = "#1a1a1a";
-  document.getElementById("mysettings").style.backgroundColor = "#0d0d0d";
-  document.getElementById("mydtext").style.backgroundColor = "#0d0d0d";
-  document.getElementById("myapps").style.backgroundColor = "#0d0d0d";
-  document.getElementById("mysnap").style.backgroundColor = "#0d0d0d";                         
+function myFunctiondark1() {
+  document.getElementById("app").style.background = "rgb(0, 0, 0, 0.5)";
+  document.getElementById("app").style.color = "rgb(0, 0, 0, 0.5)";
+  document.getElementById("metrouibar").style.background = "rgb(0, 0, 0, 0.5)";
+  document.getElementById("metrouibar").style.color = "rgb(0, 0, 0, 0.5)";
+  document.getElementById("desktopuibar").style.background = "rgb(0, 0, 0, 0.5)";
+  document.getElementById("desktopuibar").style.color = "rgb(0, 0, 0, 0.5)";
+
+}                      
+function myFunctionlight1() {
+  document.getElementById("app").style.color = "rgb(0, 0, 0, 0.5)";
 }
+function myFunctiondark() {
+  document.getElementById("app").style.background = "#1a1a1a";
+  document.getElementById("app").style.color = "#ffffff";
+  document.getElementById("metrouibar").style.background = "#1a1a1a";
+  document.getElementById("metrouibar").style.color = "#ffffff";
+  document.getElementById("desktopuibar").style.background = "#1a1a1a";
+  document.getElementById("desktopuibar").style.color = "#ffffff";
+  document.getElementById("controls").style.background = "#1a1a1a";
+  document.getElementById("controls").style.color = "#ffffff";
+  document.getElementById("calculator").style.background = "#1a1a1a";
+  document.getElementById("calculator").style.color = "#ffffff";
+
+}                      
 function myFunctionlight() {
-  document.getElementById("mysettingsheader").style.backgroundColor = "#f6f6f6";
-  document.getElementById("mydtextheader").style.backgroundColor = "#f6f6f6";
-  document.getElementById("myappsheader").style.backgroundColor = "#f6f6f6";
-  document.getElementById("mysnapheader").style.backgroundColor = "#f6f6f6";
-  document.getElementById("mysettings").style.backgroundColor = "#f4f4f4";
-  document.getElementById("mydtext").style.backgroundColor = "#f4f4f4";
-  document.getElementById("myapps").style.backgroundColor = "#f4f4f4";
-  document.getElementById("mysnap").style.backgroundColor = "#f4f4f4";
+  document.getElementById("app").style.background = "rgb(245, 245, 245, 1)";
+  document.getElementById("app").style.color = "#000000";
+  document.getElementById("metrouibar").style.background = "rgb(245, 245, 245, 1)";
+  document.getElementById("metrouibar").style.color = "#000000";
+  document.getElementById("desktopuibar").style.background = "rgb(245, 245, 245, 1)";
+  document.getElementById("desktopuibar").style.color = "#000000";
+  document.getElementById("controls").style.background = "rgb(245, 245, 245, 1)";
+  document.getElementById("controls").style.color = "#000000";
+  document.getElementById("calculator").style.background = "rgb(245, 245, 245, 1)";
+  document.getElementById("calculator").style.color = "#000000";
 }
 function myFunctionc() {
   document.body.style.backgroundColor = "#111111";
@@ -273,8 +406,8 @@ function myFunction12c() {
   document.body.style.backgroundImage = "url('')";
 }
 </script></div>
-  <button class="oobe oobe1" onclick="oobe3()">Next</button>
-  <button class="oobe oobe1" onclick="oobe3()">Skip (Can be set up in preferences)</button>
+  <button class="oobe oobe1" onclick="oobe3();controls();">Next</button>
+  <button class="oobe oobe1" onclick="oobe3();controls();">Skip (Can be set up in preferences)</button>
  </div>
  <!--Components related to setup-->
  <html>
@@ -474,23 +607,19 @@ function dragElement(elmnt) {
 </script>
 <style>
 #metrouibar {
-  border-radius: 20px;
+  border-radius: 24px;
   background-color:rgb(241, 241, 241, .8);
   padding: 8px;
-  margin-left: 8px;
-  margin-bottom: 8px;
   margin-top: 8px;
   transition: 0.3s;
 }
 
 #desktopuibar {
-  border-radius: 20px;
+  border-radius: 24px;
   background-color:rgb(241, 241, 241, .8);
   padding: 8px;
-  margin-left: 8px;
-  margin-bottom: 8px;
-  margin-top: 8px;
   transition: 0.3s;
+  margin-top: 8px;
 }
 
 .app {
@@ -534,19 +663,21 @@ function dragElement(elmnt) {
 .color10 {background-color: #ff00ff}
 .color11 {background-color: #999999}
 .color12 {background-color: #fc0000}
+.thicc {width:90%;}
 </style>
 </head>
 <body>
   <div id="metrouibar">
 <button class="app button1" onclick="app();preferences();">Preferences</button>
-<button class="app button1" onclick="">Controls</button>
-<a style="width:100%;text-align:left;margin-left:10px;">You're in Metro UI mode.</a>&nbsp;&nbsp;<button class="app button3" onclick="deskswitch();">Enter Desktop Mode</button><button class="app color2" onclick="exit();">X</button>
+<button class="app button1" onclick="controls();">Controls</button>
+<a style="width:100%;text-align:left;margin-left:10px;">You're in Metro UI mode.</a>&nbsp;&nbsp;<button class="app button3" onclick="deskswitch();">Enter Desktop Mode</button><button class="app color2" onclick="exit();playAudio();">X</button>
 <hr style="width:100%;text-align:left;margin-left:0">
 <button class="app button1" onclick="app();about();">About</button>
+<button class="app button1" onclick="calculator();">Calculator (Multitaskable)</button>
 </div>
 <div id="desktopuibar">
 <button class="app button1" onclick="app();preferences();">Preferences</button>
-<button class="app button1" onclick="">Controls</button>
+<button class="app button1" onclick="controls();">Controls</button>
 </div>
 <script>
 function deskswitch() {
@@ -575,6 +706,16 @@ function metroswitch() {
 } 
 </script>
 <script>
+function controls() {
+    var x = document.getElementById("controls");
+    if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+</script>
+<script>
 function preferences() {
     var x = document.getElementById("preferences");
     if (x.style.display === "none") {
@@ -593,8 +734,14 @@ function preferences() {
     x.style.display = "none";
   }
 }
-</script>
-<script>
+function woahthere() {
+  var x = document.getElementById("finishcontrols");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
   function app() {
   var x = document.getElementById("app");
   if (x.style.display === "none") {
@@ -609,12 +756,44 @@ function preferences() {
 #app {
   position: absolute; background-color: #f1f1f1;
   min-height: 100%; min-width: 100%;
-  z-index: 9; padding: 8px;
+  z-index: 8; padding: 8px;
   display: none; top:0%;
   right:0%; bottom:0%;
   left:0%;
+  transition: 0.5s;
+}
+
+#finishcontrols {
+  position: absolute; background-color: #000;
+  min-height: 100%; min-width: 100%;
+  z-index: 9; padding: 8px; top:0%;
+  right:0%; bottom:0%; left:0%;
+  transition: 0.5s; color:  #fff;
+}
+
+#controls {
+  position: absolute; background-color: #f1f1f1;
+  min-height: 100%; min-width: 100%;
+  z-index: 16; padding: 8px;
+  top:0%; display: none; right:0%; bottom:0%;
+  left:0%; transition: 0.5s;
+  text-align: center;
 }
 </style>
+<div id="controls">
+  <a onclick="controls()" accesskey="k"></a>
+  <a onclick="calculator()" accesskey="c"></a>
+  <h1>Control Center</h1>
+  <p>A way to quick-manage and manage minimized applications, search for things, and access settings and apps at the front of DeskUtility!</p>
+  <p>Or: Hit Alt+K and click away!</p>
+  <p><button class="app button1" onclick="calculator();">Calculator (Multitaskable, Alt+C to open. Will open behind Control Center!)</button></p>
+  <p><button class="app button2 thicc" onclick="controls();">Close Control Center</button></p>
+  <div id="finishcontrols">
+    <h1>Finish setting up!<h1>
+    <p>We caught you using keybinds. >_<</p>
+    <h3>Or:</h3>
+    <p><button class="app button2 thicc" onclick="oobe1();about();app();exit();preferences();metroswitch();controls();oobe2();oobe3();">Skip Setup (Stable, no app issues)</button><button class="app button2 thicc" onclick="controls();">Close Controls (Will re-open when setup complete)</button></p></div>
+  </div>
 <div id="app">
   <div id="about">
   <p>DeskUtility 5.0. Metro UI, Desktop UI, Flat UI, and Mobile UI are availale.</p>
@@ -650,8 +829,8 @@ function preferences() {
 <button class="app color1" onclick="openFullscreen();">Open Fullscreen</button>
 <button class="app color1" onclick="closeFullscreen();">Close Fullscreen</button>
 <p>DeskUtility Preferences</p>
-<button class="app button1" onclick="deskswitch();preferences();app();">Switch Modes (closes preferences)</button>
-<button class="app button2" onclick="preferences();app();">Close App</button>
+<button class="app button1" onclick="deskswitch();preferences();app();">Switch Modes (closes preferences)</button></p>
+<button class="app button2" onclick="preferences();app();">Close App</button></div>
 </div>
   </div>
   <!--End of what took long-->
