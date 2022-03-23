@@ -136,7 +136,7 @@ function pauseAudio() {
 </script>
 <div id="oobe">
   <h1>Welcome to DeskUtility!</h1>
-  <button class="oobe oobe1" onclick="oobe1()">Next</button>
+  <button class="oobe oobe1" onclick="oobe1();about();app();preferences();metroswitch();">Next</button>
   <button class="oobe oobe1 oobe3" onclick="oobeskip();playAudio();">Cancel OOBE (Read Following Text)</button>
   <button class="oobe oobe1 oobe3" onclick="exit();">Close DeskUtility</button>
  </div>
@@ -158,8 +158,6 @@ function pauseAudio() {
 <style>
 <style>
 </style>
-
-
 <p>Background:</p><p>
 <button class="app color1" onclick="myFunctionc();myFunctionte2();">o</button>
 <button class="app color2" onclick="myFunction2c();myFunctionte1();">o</button>
@@ -172,12 +170,40 @@ function pauseAudio() {
 <button class="app color8" onclick="myFunction8c();myFunctionte1();">o</button>
 <button class="app color9" onclick="myFunction9c();myFunctionte1();">o</button>
 <button class="app color10" onclick="myFunction10c();myFunctionte1();">o</button>
-<button class="app color11" onclick="myFunction11c();myFunctionte1();">o</button></p><button class="app color1" type="button" onclick="myFunctiondark()">Dark</button>
+<button class="app color11" onclick="myFunction11c();myFunctionte1();">o</button></p><p>
+<button class="app color1" onclick="wr1();">1</button>
+<button class="app color1" onclick="wr2();">2</button>
+<button class="app color1" onclick="wr3();">3</button>
+<button class="app color1" onclick="wr4();">4</button>
+<button class="app color1" onclick="wr5();">5</button>
+<button class="app color1" onclick="wr6();">6</button>
+<button class="app color1" onclick="wr7();">7</button>
+<p>Display Preferences</p><button class="app color1" type="button" onclick="myFunctiondark()">Dark</button>
 <button class="app color1" type="button" onclick="myFunctionlight()">Light</button>
 <button class="app color1" onclick="openFullscreen();">Open Fullscreen</button>
 <button class="app color1" onclick="closeFullscreen();">Close Fullscreen</button>
-
 <script>
+function wr1() {
+  document.body.style.backgroundImage = "url('wr1.jpg')"; 
+}
+function wr2() {
+  document.body.style.backgroundImage = "url('wr2.jpg')";   
+}
+function wr3() {
+  document.body.style.backgroundImage = "url('wr3.jpg')"; 
+}
+function wr4() {
+  document.body.style.backgroundImage = "url('wr4.jpg')"; 
+}
+function wr5() {
+  document.body.style.backgroundImage = "url('wr5.jpg')"; 
+}
+function wr6() {
+  document.body.style.backgroundImage = "url('wr6.jpg')"; 
+}
+function wr7() {
+  document.body.style.backgroundImage = "url('wr7.jpg')"; 
+}
 function myFunctiondark() {
   document.getElementById("mysettingsheader").style.backgroundColor = "#1a1a1a";
   document.getElementById("mydtextheader").style.backgroundColor = "#1a1a1a";
@@ -200,39 +226,51 @@ function myFunctionlight() {
 }
 function myFunctionc() {
   document.body.style.backgroundColor = "#111111";
+  document.body.style.backgroundImage = "url('')"; 
 }
 function myFunction2c() {
   document.body.style.backgroundColor = "#cc0000";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction3c() {
   document.body.style.backgroundColor = "#ff5500";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction4c() {
   document.body.style.backgroundColor = "#e6e600";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction5c() {
   document.body.style.backgroundColor = "#00ff00";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction6c() {
   document.body.style.backgroundColor = "#008000";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction7c() {
   document.body.style.backgroundColor = "#0099cc";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction8c() {
   document.body.style.backgroundColor = "#0000cc";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction9c() {
   document.body.style.backgroundColor = "#cc00cc";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction10c() {
   document.body.style.backgroundColor = "#ff00ff";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction11c() {
   document.body.style.backgroundColor = "#999999";
+  document.body.style.backgroundImage = "url('')";
 }
 function myFunction12c() {
   document.body.style.backgroundColor = "#fc0000";
+  document.body.style.backgroundImage = "url('')";
 }
 </script></div>
   <button class="oobe oobe1" onclick="oobe3()">Next</button>
@@ -297,7 +335,7 @@ function myFunction12c() {
   <div id="canceloobeheader">Hey!</div>
   <p>Are you sure you want to cancel OOBE?</p>
   <p>This poses issues with how apps lanch!</p>
-  <p><button class="oobe oobe1" onclick="oobeskip();">Cancel</button><button class="oobe oobe1 oobe3" onclick="oobe1();oobe2();oobeskip();">Yes</button><button class="oobe oobe1" onclick="">Dev</button></p>
+  <p><button class="oobe oobe1" onclick="oobeskip();">Cancel</button><button class="oobe oobe1 oobe3" onclick="oobe1();oobe2();oobe3();oobeskip();">Yes</button><button class="oobe oobe1" onclick="">Dev</button></p>
 </div>
 
 <script>
@@ -437,7 +475,6 @@ function dragElement(elmnt) {
 <style>
 #metrouibar {
   border-radius: 20px;
-  height: 20%;
   background-color:rgb(241, 241, 241, .8);
   padding: 8px;
   margin-left: 8px;
@@ -445,6 +482,17 @@ function dragElement(elmnt) {
   margin-top: 8px;
   transition: 0.3s;
 }
+
+#desktopuibar {
+  border-radius: 20px;
+  background-color:rgb(241, 241, 241, .8);
+  padding: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
 .app {
   background-color: #4CAF50;
   border: none;
@@ -490,26 +538,65 @@ function dragElement(elmnt) {
 </head>
 <body>
   <div id="metrouibar">
-<button class="app button1" onclick="">Preferences</button>
+<button class="app button1" onclick="app();preferences();">Preferences</button>
 <button class="app button1" onclick="">Controls</button>
-<a style="width:100%;text-align:left;margin-left:10px;">You're in Metro UI mode.</a>&nbsp;&nbsp;<button class="app button3" onclick="deskswitch();">Enter Desktop Mode</button>
+<a style="width:100%;text-align:left;margin-left:10px;">You're in Metro UI mode.</a>&nbsp;&nbsp;<button class="app button3" onclick="deskswitch();">Enter Desktop Mode</button><button class="app color2" onclick="exit();">X</button>
 <hr style="width:100%;text-align:left;margin-left:0">
-<button class="app button1" onclick="">Applications</button>
-<button class="app button1" onclick="about();">About</button>
-<button class="app button2" onclick="">Calculator (Unavailable)</button>
-<button class="app button1" onclick="">Text Editor</button>
+<button class="app button1" onclick="app();about();">About</button>
+</div>
+<div id="desktopuibar">
+<button class="app button1" onclick="app();preferences();">Preferences</button>
+<button class="app button1" onclick="">Controls</button>
 </div>
 <script>
 function deskswitch() {
-    var x = document.getElementById("metroapp");
-    document.body.style.display = "none";
     var x = document.getElementById("metrouibar");
-    document.body.style.display = "none";
+    if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+    var x = document.getElementById("desktopuibar");
+    if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
+</script>
+<script>
+function metroswitch() {
+    var x = document.getElementById("desktopuibar");
+    if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+</script>
+<script>
+function preferences() {
+    var x = document.getElementById("preferences");
+    if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
 </script>
 <script>
   function about() {
   var x = document.getElementById("about");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<script>
+  function app() {
+  var x = document.getElementById("app");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -525,18 +612,46 @@ function deskswitch() {
   z-index: 9; padding: 8px;
   display: none; top:0%;
   right:0%; bottom:0%;
-  left:0%; display: none;
+  left:0%;
 }
 </style>
 <div id="app">
-  <div id="about" style="display: none;">
+  <div id="about">
   <p>DeskUtility 5.0. Metro UI, Desktop UI, Flat UI, and Mobile UI are availale.</p>
   <p>Created And Maintained by:</p>
   <p>IconicIdiot3829/JulianLD3829.</p>
   <p>This was possible because of:</p>
   <p>HTML, JS, CSS, StackOverflow, w3schools, GitHub, Sublime Text, Computers, Chrome/Opera GX, my energy and time.</p>
   <p>Thank all of the above, and enjoy what I made!</p>
-      <button class="app button2" onclick="about();">Close App</button>
+      <button class="app button2" onclick="about();app();">Close App</button>
+</div>
+<div id="preferences">
+ <p>Background:</p><p>
+<button class="app color1" onclick="myFunctionc();myFunctionte2();">o</button>
+<button class="app color2" onclick="myFunction2c();myFunctionte1();">o</button>
+<button class="app color12" onclick="myFunction12c();myFunctionte1();">o</button>
+<button class="app color3" onclick="myFunction3c();myFunctionte1();">o</button>
+<button class="app color4" onclick="myFunction4c();myFunctionte1();">o</button>
+<button class="app color5" onclick="myFunction5c();myFunctionte1();">o</button>
+<button class="app color6" onclick="myFunction6c();myFunctionte1();">o</button>
+<button class="app color7" onclick="myFunction7c();myFunctionte1();">o</button>
+<button class="app color8" onclick="myFunction8c();myFunctionte1();">o</button>
+<button class="app color9" onclick="myFunction9c();myFunctionte1();">o</button>
+<button class="app color10" onclick="myFunction10c();myFunctionte1();">o</button>
+<button class="app color11" onclick="myFunction11c();myFunctionte1();">o</button></p><p>
+<button class="app color1" onclick="wr1();">1</button>
+<button class="app color1" onclick="wr2();">2</button>
+<button class="app color1" onclick="wr3();">3</button>
+<button class="app color1" onclick="wr4();">4</button>
+<button class="app color1" onclick="wr5();">5</button>
+<button class="app color1" onclick="wr6();">6</button>
+<button class="app color1" onclick="wr7();">7</button></p><p>Display Preferences</p><button class="app color1" type="button" onclick="myFunctiondark()">Dark</button>
+<button class="app color1" type="button" onclick="myFunctionlight()">Light</button>
+<button class="app color1" onclick="openFullscreen();">Open Fullscreen</button>
+<button class="app color1" onclick="closeFullscreen();">Close Fullscreen</button>
+<p>DeskUtility Preferences</p>
+<button class="app button1" onclick="deskswitch();preferences();app();">Switch Modes (closes preferences)</button>
+<button class="app button2" onclick="preferences();app();">Close App</button>
 </div>
   </div>
   <!--End of what took long-->
