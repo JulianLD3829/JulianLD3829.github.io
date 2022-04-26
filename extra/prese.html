@@ -77,7 +77,6 @@ p {
   display: inline-block;
   font-size: 16px;
   margin: 2px 2px;
-  cursor: pointer;
   border-radius: 10px;
   transition: 0.3s;
   font-family: 'Poppins';
@@ -137,10 +136,10 @@ function slide3() {
 <p>Use the <button class="app button1" onclick="myFunction()">Exit</button> button to leave after presenting. This tab will close without further notice!</p><p>All ready? <button class="app button1" onclick="start()">Start Presenting</button></p>
 <p style="color:#999;font-size:12px;">Please don't give me an F (':</p>
 </div>
-<div id="slide1">C <button class="app button1" onclick="slide1()">Next</button></div>
-<div id="slide2">P <button class="app button1" onclick="slide2()">Next</button></div>
-<div id="slide3">R <button class="app button1" onclick="slide3()">Next</button></div>
-<div id="slide4"><h2>You have reached the end of these slides.<h2><p><button class="app button1" onclick="closeFullscreen();window.open('', '_self', ''); window.close();">Exit</button><button class="app button1" onclick="window.location.reload();">Restart Slides From Beginning</button></p></div>
+<div id="slide1"><p>Irish immigrants began coming to the Minnesota region in the 1820s. This happened because there were issues with food supply, war, and rights. <p>These immigrants were looking to start new lives on new land.</p></p><p>These people were attracted to Minnesota because of the fact that the air was healthy, and the land was cheap, as well as the fact that people were spreading the news about how great the new land was!</p><button class="app button1" onclick="slide1()">Next</button></div>
+<div id="slide2"><button class="app button1" onclick="slide2()">Next</button></div>
+<div id="slide3"><button class="app button1" onclick="slide3()">Next</button></div>
+<div id="slide4"><h2>You have reached the end of this presentation!<h2><p><button class="app button1" onclick="closeFullscreen();window.open('', '_self', ''); window.close();">Exit</button><button class="app button1" onclick="window.location.reload();">Restart Slides From Beginning</button></p></div>
 <html>
 <style>
 #mydiv1 {
@@ -324,7 +323,7 @@ function myFunction() {
         padding: 8px 10px;
         font-size: 15px;
         color: #eee;
-        cursor: pointer;
+        
         border-radius: inherit;
       }
 
@@ -405,3 +404,4 @@ function myFunction() {
         }
       });
     </script>
+
