@@ -237,14 +237,6 @@ function pauseAudio2() {
     x.style.display = "none";
   }
 }
-  function oobeskip() {
-  var x = document.getElementById("canceloobe");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
   function exit() {
   var x = document.getElementById("closeconfirm");
   if (x.style.display === "none") {
@@ -265,7 +257,6 @@ function calculator() {
 <div id="oobe">
   <h1>Welcome to DeskUtility!</h1>
   <button class="oobe oobe1" onclick="exit();woahthere();oobe1();about();app();preferences();metroswitch();calculator();">Next</button>
-  <button class="oobe oobe1 oobe3" onclick="oobeskip();playAudio();">Cancel OOBE (Read Following Text)</button>
   <button class="oobe oobe1 oobe3" onclick="exit();playAudio();">Close DeskUtility</button>
  </div>
  <div id="browser">
@@ -423,112 +414,6 @@ function myFunction12c() {
  </div>
  <!--Components related to setup-->
  <html>
-<style>
-#canceloobe {
-  position: absolute;
-  z-index: 11;
-  background-color: #1a1a1a;
-  color: #fff;
-  text-align: center;
-  border-radius: 12px;
-  padding: 8px;
-  animation: createBox .40s;
-  left: 20%; top: 20%;
-  display: none;
-}
-@keyframes createBox {
-  0% {
-    transform: scale(0);
-  }
-  70% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-#canceloobeheader {
-  padding: 10px;
-  z-index: 11;
-  background-color: #0a0a0a;
-  color: #fff;
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
-  margin-top: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
-  cursor: grab;
-  padding: 8px;
-  animation: woah .75s;
-}
-@keyframes woah {
-  0% {
-    background: inherit;
-  }
-  60% {
-    background: #991111;
-  }
-  100% {
-    background: inherit;
-  }
-}
-
-</style>
-<body>
-<div id="canceloobe">
-  <div id="canceloobeheader">Hey!</div>
-  <p>Are you sure you want to cancel OOBE?</p>
-  <p>This poses issues with how apps lanch!</p>
-  <p><button class="oobe oobe1" onclick="oobeskip();">Cancel</button><button class="oobe oobe1 oobe3" onclick="oobe1();oobe2();oobe3();oobeskip();">Yes</button><button class="oobe oobe1" onclick="">Dev</button></p>
-</div>
-
-<script>
-//Make the DIV element draggagle:
-dragElement(document.getElementById("canceloobe"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-</script>
-
 </body>
 </html>
  <!--End of related components-->
@@ -816,9 +701,29 @@ function woahthere() {
   <p>HTML, JS, CSS, StackOverflow, w3schools, GitHub, Sublime Text, Computers, Chrome/Opera GX, my energy and time.</p>
   <p>Thank all of the above, and enjoy what I made!</p>
   <p>YES DESKUTILITY 6 IS UNDER DEVELOPMENT SORRY FOR THE LATENESS</p>
-  <iframe src="extra/ver.html" style="border:none;border-radius:10px;width:30%;height:30%;"></iframe><p>You're using DeskUtility 5.0 Mavericks.</p>
-      <button class="app button2" onclick="about();app();">Close App</button>
+  <p>You're using DeskUtility 5.2 Mavericks.</p>
+    <h2>Update log</h2>
+    <p>Added update log</p>
+    <p>Released 5.2</p>
+    <p>Patched day-zero features</p>
+    <p>Added roadmap for 6.0</p>
+    <p>Added tab title</p>
+    <p>R̶e̶m̶o̶v̶e̶d̶ ̶e̶v̶i̶d̶e̶n̶c̶e̶ ̶o̶f̶ ̶p̶r̶o̶t̶e̶s̶t̶s̶ ̶i̶n̶ ̶C̶h̶i̶n̶a̶</p>
+    <h2>Roadmap for 6.0</h2>
+    <h2>Development path</h2>
+    <p>Finished setup experience</p>
+    <p>Finished Menu Bar and all-new dock</p>
+    <p>Finishing Dock Flyouts (there's 4 of them. Search, Lock, Quick Options, and Google a.k.a Flyout Browser.)<p>
+    <p>Working on a new feature called Migration Codes (may not be availible on Day Zero)</p>
+    <p>Working on animations</p>
+    <p>Looking for bugs</p>
+    <p>Development for mobile version has not started; may not be availible on Day Zero</p>
+    <p>Development for apps has not started</p>
+    <p>Dev progress in total: 52%</p>
+    <p>Release could be at the end of May or early July. I don't know yet!!</p>
+    <button class="app button2" onclick="about();app();">Close App</button>
 </div>
+  <title>DeskUtility 5.2</title>
 <div id="preferences">
  <p>Background:</p><p>
 <button class="app color1" onclick="myFunctionc();myFunctionte2();">o</button>
