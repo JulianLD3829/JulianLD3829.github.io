@@ -48,11 +48,11 @@
 }
 
 .app:hover {
-  background-color:rgb(0,0,0,.65)
+  opacity: 65%;
 }
 
 .app:active {
-  background-color:rgb(120,120,120,.25)
+  opacity: 25%;
 }
 .button1 {background-color: #1d1d1d;}
 .button2 {background-color: #da532c;}
@@ -144,6 +144,8 @@ function closedockstuff() {
   var x = document.getElementById("dockmenu");
   x.style.display = "none";
   var x = document.getElementById("wallpaper");
+  x.style.display = "none";
+  var x = document.getElementById("accent");
   x.style.display = "none";
   var x = document.getElementById("appdrawer");
   x.style.display = "none";
@@ -519,8 +521,8 @@ function yeetmigrate() {
     </script>
   </body>
 </html>
-<div id="menubar"><button id="menubarlock" onclick="yeetlock();unlock();">Click anywhere to unlock</button><button id="abortbutton" class="barbutton1" onclick="window.location.reload();">Abort</button>
-<div id="menubar0"><button class="barbutton barbutton1" onclick="window.location.reload();">Reload</button><button id="setupinbar" onclick="setupdone();load();"><strong>Skip Setup</strong></button></div><div id="menubar1"><button class="barbutton barbutton1" onclick="appdrawer();">App Drawer</button><button class="barbutton barbutton1" onclick="searchopen();">Search</button></div><meta charset = "utf-8"><title>DeskUtility 6.0</title><div id="rightmenubar"><link rel = "stylesheet" href = "extra/clock/clock.css"><button id="cell"> </button><button id = "digital-clock"> </button></div><script src = "extra/clock/clock.js"> </script><script src="battery/script.js"> </script></div>
+<div id="menubar"><button id="menubarlock" onclick="yeetlock();unlock();">Click anywhere to unlock</button><button id="abortbutton" class="barbutton1" onclick="window.location.reload();">Abort Migration</button>
+<div id="menubar0"><button class="barbutton barbutton1" onclick="window.location.reload();">Reload</button><button id="setupinbar" onclick="setupdone();load();"><strong>Skip Setup</strong></button></div><div id="menubar1"><button class="barbutton barbutton1" onclick="appdrawer();">App Drawer</button><button class="barbutton barbutton1" onclick="searchopen();">Search</button></div><meta charset = "utf-8"><title>DeskUtility 6.2</title><div id="rightmenubar"><link rel = "stylesheet" href = "extra/clock/clock.css"><button id="cell"> </button><button id = "digital-clock"> </button></div><script src = "extra/clock/clock.js"> </script><script src="battery/script.js"> </script></div>
 </div>
 <div id="migrate"><div id="migrate1"><h2>Migration Assistant</h2><p>Throughout your migration, DeskUtility will help you along the way.</p><p>You should be done in under 2.5 minutes.</p><button class="app app1" onclick="msetup1();">Continue</button><button class="app app2" onclick="window.location.reload();">Abort</button></div>
 <div id="migrate2"><h1>Enter your Migration Code</h1><button class="keyboard" onclick="wr1();msetup2();">1</button><button class="keyboard" onclick="wr2();msetup2();">2</button><button class="keyboard" onclick="wr3();msetup2();">3</button><button class="keyboard" onclick="wr4();msetup2();">4</button><button class="keyboard" onclick="wr5();msetup2();">5</button><button class="keyboard" onclick="wr6();msetup2();">6</button><button class="keyboard" onclick="wr7();msetup2();">7</button><button class="keyboard" onclick="wr8();msetup2();">8</button><button class="keyboard" onclick="wr9();msetup2();">9</button><button class="keyboard" onclick="wr0();msetup2();">0</button></div>
@@ -745,7 +747,7 @@ function dragElement(elmnt) {
 <div id="setup">
   <div id="setup1"><h1>Hi there! Let's get you set up.<div class="pgbarsetup"><div class="pgbarsetup2 width0"></div></div></h1><button class="app app1" onclick="setup1();load();">Let's go!</button><button class="app app1" onclick="fullscreen();">Fullscreen Mode</button><button class="app app1 none" onclick="yeetmigrate();migrateopen();">Migrate</button></div>
   <div id="setup2"><h1>Random stuff so I don't get sued<div class="pgbarsetup"><div class="pgbarsetup2 width25"></div></div></h1><p>This site uses YouTube's built-in embeds in order to display content that you may need.</p><p>These YouTube embeds store cookies, but you have not used any yet so you should be fine.</p><p>Also, DeskUtility can perform badly on lower-end devices.</p><a href="https://youtube.com/embed">YouTube's terms and conditions</a></p><button class="app app1" onclick="setup2();">I agree</button><button class="app app1" onclick="idontagree();">I do not agree</button><button class="app app1 none" onclick="migrateopen();yeetmigrate();">Migrate</button><button class="app app1" onclick="window.location.reload();">Back</button></div>
-  <div id="setup3"><h1>Let's start with personalization.<div class="pgbarsetup"><div class="pgbarsetup2 width50"></div></div></h1><button class="app app1" onclick="wallpaper();">Open Wallpaper Utility</button><button class="app app1" onclick="lockper();">Personalize Lock Screen</button><button class="app app1" onclick="setup3();">Done!</button><button class="app app1" onclick="setupb2();">Back</button></div>
+  <div id="setup3"><h1>Let's start with personalization.<div class="pgbarsetup"><div class="pgbarsetup2 width50"></div></div></h1><button class="app app1" onclick="wallpaper();">Open Wallpaper Utility</button><button class="app app1" onclick="accent();">Accent Colors</button><button class="app app1" onclick="setup3();">Done!</button><button class="app app1" onclick="setupb2();">Back</button></div>
   <div id="setup4"><h1>Extra Preferences<div class="pgbarsetup"><div class="pgbarsetup2 width75"></div></div></h1>
 <button class="app app1" onclick="fullscreen();">Enter Full Screen</button><button class="app app1" onclick="windowscreen();">Exit Full Screen</button><button class="app app1" onclick="hidemenubarright();">Hide/Show Time/Battery</button><button class="app app1" onclick="setup4();">Let's go!</button><button class="app app1" onclick="setupb3();">Back</button></div>
   <div id="setup5"><h1>All done!<div class="pgbarsetup"><div class="pgbarsetup2 width100 green"></div></div></h1><button class="app app1" onclick="setupdone();">Go To DeskUtility Desktop</button><button class="app app1" onclick="setupb4();">Back</button></div>
@@ -1051,66 +1053,153 @@ function wallpaperclose() {
 }
 </script>
 <style>
-@keyframes up {
-  from {bottom:  -10%; opacity: 0%;}
-  to {bottom:  62px; opacity: 100%;}
-}
-@keyframes dockup {
-  from {bottom:  -7.5%; opacity: 0%;}
-  to {bottom:  6px; opacity: 100%;}
-}
-#dock {
+#accent {
   position: absolute;
-  max-height: 34px;
-  min-height: 34px;
-  background:rgb(0,0,0,.5);
-  z-index: 32;
-  bottom: 6px;
-  left:  50%;
-  transform: translate(-50%);
-  border-radius: 12px;
-  padding: 8px;
+  border-radius: 10px;
+  background-color:rgb(0,0,0,0.5);    
+  text-align: center;
   color: #fff;
+  height: 75%;
+  width: 75%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   backdrop-filter: blur(12px); /* Chrome and Opera */
   box-shadow: inset 0 0 0 600px rgba(0,0,0,0.0.5);
+  overflow: scroll;
+  z-index: 32;
+  padding: 1%;
   display: none;
-  animation: dockup 0.5s;
+  z-index: 35;
+  resize: both;
+  overflow: auto;
 }
-
-#docktray1 {
-  position: absolute;
-  max-height: 34px;
-  min-width: 150px;
-  max-width: 150px;
-  min-height: 34px;
-  background:rgb(0,0,0,0.5);
-  bottom: 0px;
-  left: 0%;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  padding: 8px;
-  color: #fff;
-}
-.appicon {
-  border-radius: 5px;
-  width: 34px;
-  height: 34px;
-  background:rgb(0,0,0,0);
-  transition: 0.2s;
-}
-.margin4px {margin-right: 4px;}
-.marginleft5px {margin-left: 5px;}
-.marginleft3px {margin-left: 3px;}
-.appicon:hover {
-  opacity: 60%;
-}
-.appicon:active {
-  opacity: 35%;
-}
-.googleisspecial{width:32px;height:32px;margin-bottom:0px;}
-.menuisspecial{width:32px;height:40px;margin-bottom:0px;}
 </style>
-
+<div id="accent"><h1>Accent Colors</h1>
+<button class="colors color1" onclick="accent111111();"></button>
+<button class="colors color2" onclick="accent990000();"></button>
+<button class="colors color12" onclick="accentbb0000();"></button>
+<button class="colors color4" onclick="accentffc400();"></button>
+<button class="colors color3" onclick="accentd6d600();"></button>
+<button class="colors color5" onclick="accent00ff00();"></button>
+<button class="colors color6" onclick="accent008000();"></button>
+<button class="colors color7" onclick="accent0099cc();"></button>
+<button class="colors color8" onclick="accent0000cc();"></button>
+<button class="colors color13" onclick="accent000088();"></button>
+<button class="colors color14" onclick="accent880088();"></button>
+<button class="colors color9" onclick="accentcc00cc();"></button>
+<button class="colors color10" onclick="accentff00ff();"></button>
+<button class="colors color11" onclick="accent999999();"></button>
+<p><button class="app app1" onclick="accentclose();">Done!</button></p>
+</div>
+<script>
+function accent111111() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#111111';
+   box.style.color = '#ffffff';
+ });
+}
+function accent990000() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#990000';
+   box.style.color = '#ffffff';
+ });
+}
+function accentd6d600() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#d6d600';
+   box.style.color = '#000000';
+ });
+}
+function accentffc400() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#ffc400';
+   box.style.color = '#000000';
+ });
+}
+function accent00ff00() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#00ff00';
+   box.style.color = '#000000';
+ });
+}
+function accent008000() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#008000';
+   box.style.color = '#ffffff';
+ });
+}
+function accent0099cc() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#0099cc';
+   box.style.color = '#ffffff';
+ });
+}
+function accent0000cc() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#0000cc';
+   box.style.color = '#ffffff';
+ });
+}
+function accent000088() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#000088';
+   box.style.color = '#ffffff';
+ });
+}
+function accent880088() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#880088';
+   box.style.color = '#ffffff';
+ });
+}
+function accentcc00cc() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#cc00cc';
+   box.style.color = '#ffffff';
+ });
+}
+function accentff00ff() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#ff00ff';
+   box.style.color = '#ffffff';
+ });
+}
+function accent999999() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#999999';
+   box.style.color = '#ffffff';
+ });
+}
+function accentbb0000() {
+const boxes = document.querySelectorAll('.app');
+ boxes.forEach(box => {
+   box.style.backgroundColor = '#bb0000';
+   box.style.color = '#ffffff';
+ });
+}
+function accent() {
+  var x = document.getElementById("accent");
+  x.style.display = "block";
+}
+function accentclose() {
+  var x = document.getElementById("accent");
+  x.style.display = "none";
+}
+</script>
 <script>
 function searchopen() {
   var x = document.getElementById("search");
@@ -1196,6 +1285,7 @@ function searchopen() {
       <li style=""><a onclick="search();">Close Search Menu</a></li>
       <li style=""><a onclick="window.location.reload()">Reload DeskUtility</a></li>
       <li style=""><a onclick="wallpaper();">Change Wallpaper</a></li>
+      <li style=""><a onclick="accent();">Change Accent Color</a></li>
       <li style=""><a onclick="appdrawer();">Open App Drawer</a></li>
       <li style=""><a onclick="google();">Perform Web Search</a></li>
       <li style=""><a onclick="dockmenu();">Open Quick Options</a></li>
@@ -1261,6 +1351,65 @@ function dockmenu() {
 <html>
 <head>
 <style>
+@keyframes up {
+  from {bottom:  -10%; opacity: 0%;}
+  to {bottom:  62px; opacity: 100%;}
+}
+@keyframes dockup {
+  from {bottom:  -7.5%; opacity: 0%;}
+  to {bottom:  6px; opacity: 100%;}
+}
+#dock {
+  position: absolute;
+  max-height: 34px;
+  min-height: 34px;
+  background:rgb(0,0,0,.5);
+  z-index: 32;
+  bottom: 6px;
+  left:  50%;
+  transform: translate(-50%);
+  border-radius: 12px;
+  padding: 8px;
+  color: #fff;
+  backdrop-filter: blur(12px); /* Chrome and Opera */
+  box-shadow: inset 0 0 0 600px rgba(0,0,0,0.0.5);
+  display: none;
+  animation: dockup 0.5s;
+}
+
+#docktray1 {
+  position: absolute;
+  max-height: 34px;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 34px;
+  background:rgb(0,0,0,0.5);
+  bottom: 0px;
+  left: 0%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 8px;
+  color: #fff;
+}
+.appicon {
+  border-radius: 5px;
+  width: 34px;
+  height: 34px;
+  background:rgb(0,0,0,0);
+  transition: 0.2s;
+}
+.margin4px {margin-right: 4px;}
+.marginleft5px {margin-left: 5px;}
+.marginleft3px {margin-left: 3px;}
+.appicon:hover {
+  opacity: 60%;
+}
+.appicon:active {
+  opacity: 35%;
+}
+.googleisspecial{width:32px;height:32px;margin-bottom:0px;}
+.menuisspecial{width:32px;height:40px;margin-bottom:0px;}
+
 #dockmenu {
   position: absolute;
   border-radius: 12px;
@@ -1347,7 +1496,8 @@ function appdrawer() {
   x.style.display = "none";
 }
 </script>
-<div id="appdrawer"><h2>App Drawer</h2><img onclick="calcopen();appdrawer();" src="images/icon/deskcalc.png" class="appicon"></img><img onclick="mapsopen();appdrawer();" src="images/icon/maps.png" class="appicon"></img><img onclick="calenderopen();appdrawer();" src="images/icon/deskcal.png" class="appicon"></img><img onclick="textopen();appdrawer();" src="images/icon/textedit.png" class="appicon"></img></div>
+<div id="appdrawer"><h2>App Drawer</h2><img onclick="calcopen();appdrawer();" src="images/icon/deskcalc.png" class="appicon"></img><img onclick="mapsopen();appdrawer();" src="images/icon/maps.png" class="appicon"></img><img onclick="calenderopen();appdrawer();" src="images/icon/deskcal.png" class="appicon"></img><img onclick="textopen();appdrawer();" src="images/icon/textedit.png" class="appicon"></img><img onclick="script();appdrawer();" src="images/icon/scriptmod.png" class="appicon"></img></div>
+
 <div id="dockmenu"><h2>Quick Options</h2><button class="quickopt quickopt1 norightborderradius norightmargin pillfirst" onclick="fullscreen();">Enter Full Screen</button><button class="noleftborderradius noleftmargin quickopt quickopt1" onclick="windowscreen();">Exit Full Screen</button><button class="quickopt quickopt1" onclick="hidemenubarright();">Hide/Show Time/Battery</button><button class="quickopt quickopt1 norightborderradius norightmargin pillfirst" onclick="notify();offlinemode();">Offline Mode</button><button class="quickopt quickopt1 noleftborderradius noleftmargin" onclick="notify();onlinemode();">Online Mode</button><button class="quickopt quickopt1 noleftborderradius noleftmargin" onclick="lock();yeetlock();hidefromlock();">Lock DeskUtility</button></div>
 
 <script>
@@ -1876,11 +2026,13 @@ function dragElement(elmnt) {
 .nopaddingleft {
   padding-left: 0;
 }
+#textjail {
+  
+}
 </style>
 <body>
 <div id="text">
-  <div id="textheader"><button class="close" onclick="textclose();">X</button>TextEdit</div><button class="textedit nopaddingleft" onclick="document.getElementById('text-val').value = ''">Delete</button><button class="textedit" id="dwn-btn"/>Download .txt</button><button class="textedit" onclick="copy();">Copy All</button><script>
-</script><textarea placeholder="Start typing..." type="text" style="width:100%;border-radius:8px;max-height:69%;max-width:100%;padding:6px;color:#fff;margin-top:2px;border:0px solid black; background:#2b2b2b;" id="text-val"></textarea>
+  <div id="textheader"><button class="close" onclick="textclose();">X</button>TextEdit</div><button class="textedit nopaddingleft" onclick="document.getElementById('text-val').value = ''">Delete</button><button class="textedit" id="dwn-btn"/>Download .txt</button><button class="textedit" onclick="copy();">Copy All</button><div id="textjail"><textarea placeholder="Start typing..." type="text" style="width:100%;border-radius:8px;max-height:90%;max-width:100%;min-width:100%;padding:6px;color:#fff;margin-top:2px;border:0px solid black; background:#2b2b2b;" id="text-val"></textarea></div>
  <script>
 function copy() {
   var copyText = document.getElementById("text-val");
@@ -1959,6 +2111,171 @@ function dragElement(elmnt) {
 }
 </script>
 <style>
+#stext {
+  border-radius: 12px;
+  position: absolute;
+  z-index: 9;
+  background-color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  width:  40%;
+  height: 40%;
+  padding: 8px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#stextheader {
+  padding: 10px;
+  z-index: 10;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  text-align: right;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  border-bottom: 1px solid #777;
+}
+
+#stext:hover {
+  z-index: 10;
+}
+
+.stextedit {
+  border: none;
+  color: white;
+  min-height: 28px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  background-color: transparent !important;
+  font-family: 'Poppins';
+}
+
+.stextedit:hover {
+  color: #666;
+}
+
+.stextedit:active {
+  color: #555;
+}
+
+.nopaddingleft {
+  padding-left: 0;
+}
+#stextjail {
+  
+}
+</style>
+<body>
+<div id="stext">
+  <div id="stextheader"><button class="close" onclick="stextclose();">X</button>JavaScript Editor</div><button class="stextedit nopaddingleft" onclick="document.getElementById('stext-val').value = ''">Delete</button><button class="stextedit" id="dwn-btnjs"/>Download .js</button><button class="stextedit" id="dwn-btn2"/>Download .txt</button><button class="stextedit" onclick="copy2();">Copy All</button><button class="stextedit" onclick="doIt();">Run Code</button><div id="stextjail"><textarea placeholder="Start typing..." type="stext" style="width:100%;border-radius:8px;max-height:90%;max-width:100%;min-width:100%;padding:6px;color:#fff;margin-top:2px;border:0px solid black; background:#2b2b2b;" id="stext-val"></textarea></div>
+ <script>
+function copy2() {
+  var copyText = document.getElementById("stext-val");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  navigator.clipboard.writeText(copyText.value);
+}
+
+    function download(filename, stext) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:stext/plain;charset=utf-8,' + encodeURIComponent(stext));
+        element.setAttribute('download', filename);
+       element.style.display = 'none';
+       document.body.appendChild(element);
+       element.click();
+       document.body.removeChild(element);
+   }
+
+   // Start file download.
+   document.getElementById("dwn-btn2").addEventListener("click", function(){
+       var stext = document.getElementById("stext-val").value;
+       var filename = "filename.txt";
+       download(filename, stext);
+   }, false);
+
+function doIt() {
+    var headID = document.getElementsByTagName("head")[0];
+    var newScript = document.createElement("script");
+    newScript.type = "text/javascript";
+    newScript.innerHTML = document.getElementById("stext-val").value;
+    headID.appendChild(newScript);
+}
+</script>
+<script>function download(filename, stext) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:stext/plain;charset=utf-8,' + encodeURIComponent(stext));
+        element.setAttribute('download', filename);
+       element.style.display = 'none';
+       document.body.appendChild(element);
+       element.click();
+       document.body.removeChild(element);
+   }
+
+   // Start file download.
+   document.getElementById("dwn-btnjs").addEventListener("click", function(){
+       var stext = document.getElementById("stext-val").value;
+       var filename = "filename.js";
+       download(filename, stext);
+   }, false);</script>
+</div></div>
+<script>
+function script() {
+  var x = document.getElementById("stext");
+  x.style.display = "block"
+}
+function stextclose() {
+  var x = document.getElementById("stext");
+  x.style.display = "none"
+}
+</script>
+<script>
+dragElement(document.getElementById("stext"));
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // stextl a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // stextulate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+<style>
 #calender {
   border-radius: 12px;
   position: absolute;
@@ -1992,7 +2309,7 @@ function dragElement(elmnt) {
 </style>
 <body>
 <div id="calender">
-  <div id="calenderheader"><button class="close" onclick="calenderclose();">X</button>Calender</div><div align="center"><iframe style="border-radius:8px;background-color: #1a1a1a;" src="https://widget.calendarlabs.com/v1/calendar.php?cid=1001&ver=1.2&uid=6134683183&c=8&l=en&cbg=1a1a1a&cfg=fff&hfg=fff&hfg1=fff&ct=1&cb=1&cbc=1a1a1a&cf=verdana&cp=bottom&sw=0&hp=t&ib=0&ibc=&i=images/"frameborder=no scrolling=no allowtransparency='true'>Loading...</iframe></div>
+  <div id="calenderheader"><button class="close" onclick="calenderclose();">X</button>Calender</div><iframe style="border-radius:8px;background-color: #1a1a1a;" src="https://widget.calendarlabs.com/v1/calendar.php?cid=1001&ver=1.2&uid=6134683183&c=8&l=en&cbg=1a1a1a&cfg=fff&hfg=fff&hfg1=fff&ct=1&cb=1&cbc=1a1a1a&cf=verdana&cp=bottom&sw=0&hp=t&ib=0&ibc=&i=images/"frameborder=no scrolling=no allowtransparency='true'>Loading...</iframe></div>
 <script>
 function calenderopen() {
   var x = document.getElementById("calender");
